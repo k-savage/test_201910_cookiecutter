@@ -6,8 +6,7 @@ print("hello")
 print(os.path.join('{{cookiecutter.repo_name}}', '{{cookiecutter.project_slug}}'))
 
 base_dir = os.getcwd()
-filename = ('{{cookiecutter.repo_name}}'/'{{cookiecutter.project_slug}}')
-print(os.path.join(base_dir, filename))
+print(os.path.join(base_dir, '{{cookiecutter.repo_name}}','{{cookiecutter.project_slug}}'))
 
 os.path.join(base_dir, filename)
 '/bla/bing/data.txt'
