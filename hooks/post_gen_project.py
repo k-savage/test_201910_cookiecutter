@@ -2,6 +2,15 @@ import os
 import shutil
 
 print(os.getcwd())  # prints /absolute/path/to/{{cookiecutter.project_slug}}
+print("hello")
+print(os.path.join('{{cookiecutter.repo_name}}', '{{cookiecutter.project_slug}}'))
+
+base_dir = os.getcwd()
+filename = ('{{cookiecutter.repo_name}}'/'{{cookiecutter.project_slug}}')
+print(os.path.join(base_dir, filename))
+
+os.path.join(base_dir, filename)
+'/bla/bing/data.txt'
 
 def remove(filepath):
     if os.path.isfile(filepath):
