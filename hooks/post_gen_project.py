@@ -21,6 +21,6 @@ create_install_csci_utils = '{{cookiecutter.install_csci_utils}}' == 'yes'
 
 if not create_install_csci_utils:
     #remove top-level file inside the generated folder
-    os.rmdir(os.path.join(base_dir, '{{cookiecutter.project_slug}}')) #removes an empty directory.
-    #shutil.rmtree(os.path.join(base_dir, '{{cookiecutter.repo_name}}','{{cookiecutter.project_slug}}')) #deletes a directory and all its contents.
+    #os.rmdir(os.path.join(base_dir, '{{cookiecutter.project_slug}}')) #removes an empty directory.
+    shutil.rmtree(os.path.join(base_dir, '{{cookiecutter.project_slug}}')) #deletes a directory and all its contents.
     #remove(os.path.join('{{cookiecutter.repo_name}}', '{{cookiecutter.project_slug}}'))
