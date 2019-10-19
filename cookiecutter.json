@@ -1,0 +1,7 @@
+{
+    "github_username": "csci-e-29",
+    "repo_name": "2019fa-{{cookiecutter.project_name}}",
+    "project_slug": "{{cookiecutter.project_name}}",
+    "install_csci_utils": "yes",
+    "version": "0.1.0"
+}
