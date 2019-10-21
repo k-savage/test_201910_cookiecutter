@@ -5,8 +5,8 @@ import os
 
 def get_csci_salt() -> bytes:
     """Returns the appropriate salt for CSCI E-29"""
-    # retrieve os environment variable called CSCI_SALT
-    SALT = os.environ["CSCI_SALT"]
+    # retrieve hardcoded variable called CSCI_SALT, since we do not need to store this as an environment variable for this project
+    SALT='3f87b3a5b7e48ba408964366a7194789249d4ed33b962a9e5d76c5d6122237bc'
 
     # convert hexadecimal salt to bytes equivalent and return those bytes
     return bytes.fromhex(SALT)
@@ -45,3 +45,14 @@ def get_user_id(username: str) -> str:
     salt = get_csci_salt()
     # compute and return hash digest of input
     return hash_str(username.lower(), salt=salt).hex()[:8]
+
+def get_user_hash(username, salt=None):
+    """Converts username string to hash digest
+
+    :param username: string to hash
+    :param salt: add randomness to the hashing
+    :return: hash digest of input
+    """
+    # get salt if provided else retrieve it from environment variables
+    salt = salt or get_csci_salt()
+    return hash_str(username, salt=salt)

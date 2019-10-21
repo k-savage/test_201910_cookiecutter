@@ -3,6 +3,8 @@
     "project_name": "cookiecutter-csci-pset-k-savage",
     "repo_name": "2019fa-{{cookiecutter.project_name}}",
     "project_slug": "{{cookiecutter.project_name}}",
+    "release_date": "{% now 'local' %}",
+    "_extensions": ["jinja2_time.TimeExtension"],
     "install_csci_utils": "yes",
     "version": "0.1.0"
 }
