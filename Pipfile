@@ -4,8 +4,16 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+pytest = "*"
+pytest-cov = "*"
 
 [packages]
+awscli = "*"
+pandas = "*"
+fastparquet = "*"
+xlrd = "*"
+openpyxl = "*"
+csci-utils = {editable = true,git = "https://github.com/csci-e-29/2019fa-csci-utils-k-savage"}
 
 [requires]
 python_version = "3.7"
