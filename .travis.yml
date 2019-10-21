@@ -9,6 +9,9 @@ python:
 install:
 - pip install pipenv
 - pipenv install --system --deploy --ignore-pipfile
+- "pip install -r requirements-dev.txt"
+
+script: pytest
 
 stages:
   - test

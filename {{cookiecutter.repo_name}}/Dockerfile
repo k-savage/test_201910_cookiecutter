@@ -21,3 +21,6 @@ COPY Pipfile.lock .
 RUN pipenv install --deploy --ignore-pipfile --dev
 
 ENTRYPOINT ["pipenv", "run"]
+
+ARG CI_USER_TOKEN
+RUN echo "machine github.com\n  login $CI_USER_TOKEN\n" >~/.netrc
